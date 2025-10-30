@@ -59,7 +59,7 @@ int main(int argc, char** argv)
     RCLCPP_INFO(node->get_logger(), "test_xarm_planner_node_joint start");
     // node->declare_parameter("dof");
     int dof;
-    node->get_parameter_or("dof", dof, 7);
+    node->get_parameter_or("dof", dof, 6);
     RCLCPP_INFO(node->get_logger(), "namespace: %s, dof: %d", node->get_namespace(), dof);
     
     signal(SIGINT, exit_sig_handler);
