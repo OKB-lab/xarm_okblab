@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <!-- <node pkg="xarm_planner" exec="xarm6_planner_fake" name="xarm6_planner_fake" output="screen"/> -->
+    <node pkg="xarm_planner_move" exec="xarm_planner_move" name="xarm_planner_fake" output="screen"/>
+</launch>
