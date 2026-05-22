@@ -129,38 +129,38 @@ int main(int argc, char** argv)
 	// target_pose4.orientation.z = 0;
 	// target_pose4.orientation.w = 0;
     
-    // while (rclcpp::ok())
-    // {
-        // pose_plan_req->target = target_pose1;
-        // RCLCPP_INFO(node->get_logger(), "move to target_pose1");
-        // call_request(pose_plan_client_, pose_plan_req);
-        // call_request(exec_plan_client_, exec_plan_req);
+    while (rclcpp::ok())
+    {
+        pose_plan_req->target = target_pose1;
+        RCLCPP_INFO(node->get_logger(), "move to target_pose1");
+        call_request(pose_plan_client_, pose_plan_req);
+        call_request(exec_plan_client_, exec_plan_req);
 
-        // pose_plan_req->target = target_pose2;
-        // RCLCPP_INFO(node->get_logger(), "move to target_pose2");
-        // call_request(pose_plan_client_, pose_plan_req);
-        // call_request(exec_plan_client_, exec_plan_req);
+        pose_plan_req->target = target_pose2;
+        RCLCPP_INFO(node->get_logger(), "move to target_pose2");
+        call_request(pose_plan_client_, pose_plan_req);
+        call_request(exec_plan_client_, exec_plan_req);
 
-        // pose_plan_req->target = target_pose3;
-        // RCLCPP_INFO(node->get_logger(), "move to target_pose3");
-        // call_request(pose_plan_client_, pose_plan_req);
-        // call_request(exec_plan_client_, exec_plan_req);
+        pose_plan_req->target = target_pose3;
+        RCLCPP_INFO(node->get_logger(), "move to target_pose3");
+        call_request(pose_plan_client_, pose_plan_req);
+        call_request(exec_plan_client_, exec_plan_req);
 
         pose_plan_req->target = target_pose4;
         RCLCPP_INFO(node->get_logger(), "move to target_pose4");
         call_request(pose_plan_client_, pose_plan_req);
         call_request(exec_plan_client_, exec_plan_req);
         
-        // pose_plan_req->target = target_pose3;
-        // RCLCPP_INFO(node->get_logger(), "move to target_pose3");
-        // call_request(pose_plan_client_, pose_plan_req);
-        // call_request(exec_plan_client_, exec_plan_req);
+        pose_plan_req->target = target_pose3;
+        RCLCPP_INFO(node->get_logger(), "move to target_pose3");
+        call_request(pose_plan_client_, pose_plan_req);
+        call_request(exec_plan_client_, exec_plan_req);
         
-        // pose_plan_req->target = target_pose2;
-        // RCLCPP_INFO(node->get_logger(), "move to target_pose2");
-        // call_request(pose_plan_client_, pose_plan_req);
-        // call_request(exec_plan_client_, exec_plan_req);
-    // }
+        pose_plan_req->target = target_pose2;
+        RCLCPP_INFO(node->get_logger(), "move to target_pose2");
+        call_request(pose_plan_client_, pose_plan_req);
+        call_request(exec_plan_client_, exec_plan_req);
+    }
 
     RCLCPP_INFO(node->get_logger(), "move_ptp_repeat over");
     return 0;

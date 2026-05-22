@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <node pkg="air_gripper" exec="air_gripper" name="air_gripper" output="screen"/>
+</launch>

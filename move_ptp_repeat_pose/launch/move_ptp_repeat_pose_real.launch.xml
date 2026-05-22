@@ -8,6 +8,6 @@
 
     <node pkg="move_ptp_repeat_pose" exec="move_ptp_repeat_pose" name="move_ptp_repeat_pose" output="screen">
         <param name="dof" value="$(var dof)"/>
-    	<param from="$(find-pkg-share move_ptp_repeat_pose)/config/move_ptp_repeat_pose.yaml" />
+        <param from="$(find-pkg-share move_ptp_repeat_pose)/config/move_ptp_repeat_pose.yaml"/>
     </node>
 </launch>
