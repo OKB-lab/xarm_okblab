@@ -1,0 +1,11 @@
+<launch>
+    <arg name="dof" default="6"/>
+    <arg name="robot_ip" default="192.168.1.203"/>
+
+    <include file="$(find-pkg-share xarm_planner)/launch/xarm6_planner_fake.launch.py"/>
+
+    <node pkg="move_ptp_random_joint" exec="move_ptp_random_joint" name="move_ptp_random_joint" output="screen">
+        <param name="dof" value="$(var dof)"/>
+    	<!-- <param from="$(find-pkg-share move_ptp_random_joint)/config/move_ptp_random_joint.yaml" /> -->
+    </node>
+</launch>

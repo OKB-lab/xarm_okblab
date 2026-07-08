@@ -1,0 +1,12 @@
+move_cont_cart_vel:
+  ros__parameters:
+    Kp: 1.0
+    R: 100
+    W: 0.03
+    center_x: 300
+    center_y: -300
+    center_z: 400
+    q_w: 0.7071
+    q_x: 0.0
+    q_y: 0.7071
+    q_z: 0.0

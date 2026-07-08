@@ -1,0 +1,8 @@
+<launch>
+    <arg name="dof" default="6"/>
+    <arg name="robot_ip" default="192.168.1.203"/>
+
+    <include file="$(find-pkg-share xarm_planner)/launch/xarm6_planner_realmove.launch.py">
+        <arg name="robot_ip" value="$(var robot_ip)"/>
+    </include>
+</launch>
