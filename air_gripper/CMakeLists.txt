@@ -7,6 +7,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(hand_control_interfaces REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(std_srvs REQUIRED)
@@ -26,7 +27,19 @@ ament_target_dependencies(
   "xarm_msgs"
 )
 
-install(TARGETS air_gripper
+add_executable(open2air_gripper src/open2air_gripper.cpp)
+target_include_directories(open2air_gripper PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>)
+target_compile_features(open2air_gripper PUBLIC cxx_std_17)
+ament_target_dependencies(
+  open2air_gripper
+  "hand_control_interfaces"
+  "rclcpp"
+  "std_srvs"
+)
+
+install(TARGETS air_gripper open2air_gripper
   DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY launch

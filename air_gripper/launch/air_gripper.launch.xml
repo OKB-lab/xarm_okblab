@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
+    <arg name="openhand" default="false"/>
+
     <node pkg="air_gripper" exec="air_gripper" name="air_gripper" output="screen"/>
+    <node pkg="air_gripper" exec="open2air_gripper" name="open2air_gripper"
+          output="screen" if="$(var openhand)"/>
 </launch>
