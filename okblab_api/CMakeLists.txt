@@ -24,9 +24,16 @@ ament_target_dependencies(move_cont_cart_vel
   xarm_msgs
 )
 
+add_executable(move_cont_cart_pos src/move_cont_cart_pos.cpp)
+ament_target_dependencies(move_cont_cart_pos
+  rclcpp
+  xarm_msgs
+)
+
 install(TARGETS
   xarm6_activate
   move_cont_cart_vel
+  move_cont_cart_pos
   DESTINATION lib/${PROJECT_NAME}
 )
 

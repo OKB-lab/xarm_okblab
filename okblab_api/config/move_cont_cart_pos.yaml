@@ -1,0 +1,14 @@
+move_cont_cart_pos:
+  ros__parameters:
+    # Cartesian targets: [x (mm), y (mm), z (mm), roll (rad), pitch (rad), yaw (rad)]
+    # They are repeated in the order pose1 -> pose2 -> pose3 -> pose4 -> pose1.
+    pose1: [300.0, 0.0, 400.0, 3.141592, 0.0, 0.0]
+    pose2: [300.0, 0.0, 400.0, 2.356194, 0.0, 0.0]
+    pose3: [300.0, 0.0, 400.0, 3.141592, 0.0, 0.0]
+    pose4: [300.0, 0.0, 400.0, 3.141592, 0.785398, 0.0]
+    speed: 100.0
+    acc: 1000.0
+    mvtime: 0.0
+    timeout: -1.0
+    radius: -1.0
+    motion_type: 0
